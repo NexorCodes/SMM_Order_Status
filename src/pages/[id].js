@@ -173,12 +173,12 @@ export default function Order({ data }) {
                             <UnorderedList w="full" listStyleType="none" ml={0}>
                                 <ListItem mt={2} w="100%" justifyContent="space-between" display="flex" flexDir="row" alignItems="center">
                                     <Text>{terms[locale].order_date}:</Text>
-                                    <Text ml={2} fontWeight="bold" textAlign="right">{moment(data[0]?.created).locale(locale).format('LLL')}</Text>
+                                    <Text ml={2} fontWeight="bold" textAlign="right">{moment(data[0]?.created).locale(locale).add(3, 'hours').format('LLL')}</Text>
                                 </ListItem>
                                 <Divider />
                                 <ListItem mt={2} w="100%" justifyContent="space-between" display="flex" flexDir="row" alignItems="center">
                                     <Text>{terms[locale].last_update}:</Text>
-                                    <Text ml={2} fontWeight="bold" textAlign="right">{moment(data[0]?.changed).locale(locale).format('LLL')}</Text>
+                                    <Text ml={2} fontWeight="bold" textAlign="right">{moment(data[0]?.changed).locale(locale).add(3, 'hours').format('LLL')}</Text>
                                 </ListItem>
                                 <Divider />
                                 <ListItem mt={2} w="100%" justifyContent="space-between" display="flex" flexDir="row" alignItems="center">
